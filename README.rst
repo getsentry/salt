@@ -7,6 +7,15 @@ pip-compile --output-file=requirements/static/pkg/py3.8/darwin.txt \
     requirements/static/pkg/darwin.in
 ```
 
+Also the following unused (by us) optional dependencies are removed:
+
+- cherrypy (pulls in a LOT of stuff)
+- rpm-vercmp
+- setproctitle
+- linode-python
+- vultr
+- apache-libcloud
+
 
 .. image:: https://img.shields.io/github/license/saltstack/salt
    :alt: Salt Project License: Apache v2.0
