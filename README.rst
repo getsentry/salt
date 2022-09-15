@@ -1,3 +1,13 @@
+This is a fork of salt v3005 that updates `pyopenssl` and adds requirement file
+for py3.8 on Darwin. See https://github.com/getsentry/pypi/pull/75.
+
+```sh
+pip-compile --output-file=requirements/static/pkg/py3.8/darwin.txt \
+    requirements/darwin.txt \
+    requirements/static/pkg/darwin.in
+```
+
+
 .. image:: https://img.shields.io/github/license/saltstack/salt
    :alt: Salt Project License: Apache v2.0
    :target: https://github.com/saltstack/salt/blob/master/LICENSE
