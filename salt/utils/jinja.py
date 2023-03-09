@@ -109,6 +109,10 @@ class SaltCacheLoader(BaseLoader):
         ):
             attr = "_cached_pillar_client" if self.pillar_rend else "_cached_client"
             cached_client = getattr(self, attr, None)
+            if cached_client is not None:
+                if cached_client.opts['cachedir'] != self.opts['cachedir']:
+                    self.shutdown()
+                    cached_client = None
             if (
                 cached_client is None
                 or not hasattr(cached_client, "opts")
