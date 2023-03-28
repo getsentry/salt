@@ -69,6 +69,14 @@ warnings.filterwarnings(
     append=True,
 )
 
+# https://github.com/saltstack/salt/pull/62863
+warnings.filterwarnings(
+    "ignore",
+    message="Setuptools is replacing distutils.",
+    category=UserWarning,
+    module="_distutils_hack",
+)
+
 
 def __define_global_system_encoding_variable__():
     import sys
