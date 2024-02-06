@@ -62,7 +62,7 @@ python-gnupg==0.4.8
     # via -r requirements/darwin.txt
 pyyaml==6.0.1
     # via -r requirements/base.txt
-pyzmq==23.2.0
+pyzmq==24.0.0
     # via -r requirements/zeromq.txt
 requests==2.31.0
     # via -r requirements/base.txt
